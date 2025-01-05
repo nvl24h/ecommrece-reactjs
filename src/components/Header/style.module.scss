@@ -1,12 +1,20 @@
 @import "@styles/mixin.module.scss";
 @import "@styles/variable.module.scss";
 
+.container {
+  @include flex_box_custom(center, center, 10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .containerHeader {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 83px;
-  background-color: aqua;
+  width: 1250px;
 }
 
 .containerBoxIcon {
@@ -18,7 +26,7 @@
 }
 
 .containerMenu {
-  @include flex_box_custom(center, center, 20px);
+  @include flex_box_custom(center, center, 30px);
 }
 
 .boxIcon {
@@ -29,12 +37,17 @@
   height: 26px;
 }
 
+.menu {
+  cursor: pointer;
+  padding-top: 8px;
+}
+
 .menu::after {
   content: "";
   display: block;
   width: 100%;
   height: 3px;
-  margin-top: 5px ;
+  margin-top: 5px;
   background-color: $primary_color;
 
   transform-origin: right;
